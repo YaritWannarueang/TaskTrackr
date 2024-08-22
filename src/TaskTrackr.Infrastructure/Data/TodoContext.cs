@@ -5,11 +5,11 @@ namespace TaskTrackr.Infrastructure.Data
 {
     public class TodoContext : DbContext
     {
-        public DbSet<TodoItem> TodoItems { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        public TodoContext(DbContextOptions<TodoContext> options)
+            : base(options)
         {
-            modelBuilder.Entity<TodoItem>().ToTable("TodoItems");
         }
+
+        public DbSet<TodoItem> TodoItems { get; set; }
     }
 }
