@@ -1,0 +1,58 @@
+# .NET
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.lock.json
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.nupkg
+
+# VS Code
+.vscode/
+
+# Azure Pipelines
+.azure-pipelines/
+
+# Local .NET Core files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Visual Studio
+.vs/
