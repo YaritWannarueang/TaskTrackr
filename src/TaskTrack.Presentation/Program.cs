@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System.CommandLine;
 using TaskTrack.Presentation.Commands;
 using TaskTrackr.Application.Interfaces;
@@ -16,6 +17,12 @@ var host = Host.CreateDefaultBuilder(args)
         services.AddScoped<ListTodosUseCase>();
         services.AddScoped<CompleteTodoUseCase>();
         services.AddScoped<DeleteTodoUseCase>();
+    })
+    .ConfigureLogging(logging =>
+    {
+        logging.ClearProviders();
+        logging.AddConsole();
+        logging.SetMinimumLevel(LogLevel.Warning);
     })
     .Build();
 
